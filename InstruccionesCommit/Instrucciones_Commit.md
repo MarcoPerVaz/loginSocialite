@@ -1,38 +1,109 @@
 
-  <!-- Title -->
-  <h1 align="center">Proyecto - Login con Socialite</h1>
-  <!-- End Title -->
+<!-- Title -->
+<h1 align="center">Proyecto - LoginSocialite</h1>
+<!-- End Title -->
 
 <!-- Commit name -->
-<h2>Commit - <strong>Migraciones - users, user_social_account</strong></h2>
+<h2>Commit - <strong>Crear APPs para el inicio de sesión con Facebook y Github</strong></h2>
 <!-- End Commit name -->
 
 <!-- Commit instructions -->
+  <!-- API Facebook -->
+  <h3>Facebook</h3>
   <ol>
     <li>
-      Edición de la migración <code>create_users_table</code>
-      <br>
-      <em>*Los campos de la tabla <code>user_social_accounts</code> bien se pueden crear en una migración por separado</em>
+      Iniciar sesión en Facebook Developers:
+      <pre><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fdevelopers.facebook.com%2F%3Fno_redirect%3D1">Ir a Facebook developers</a></pre>
+      <em>*Iniciar sesión con tu cuenta de Facebook o crear una nueva</em>
     </li>
     <li>
-      Creación de la Base de Datos loginSocialite desde la consola de laragon
-      <pre>mysql -u root</pre>
-      <pre>create database cursosOnline_laravel56_Udemy</pre>
+      Crea una nueva App
+    </li>
+    <li>
+      Asignar nombre
+      <br>
+      <code>Login Socialite</code>
+    </li>
+    <li>Asignar email de contacto</li>
+    <li>Click en Configurar Inicio de sesión con Facebook</li>
+    <li>Click en Configuración en el panel inferior izquierdo</li>
+    <li>
+      Colocar en el campo URI de redireccionamiento de OAuth válidos
+      <br>
+      <code>https://loginsocialite.it/login/facebook/callback</code>
+      <br>
+      <em>*Tener en cuenta el nombre del Host virtual y su dominio</em>
+    </li>
+    <li>Click en Guardar cambios</li>
+    <li>Click en Configuración de la parte superior izquierda</li>
+    <li>
+      Click en Básica
+      <br>
+      <em>*Ahí es donde se muestran las credenciales de la API de Facebook</em>
+    </li>
+  </ol>
+
+  <!-- API Github -->
+  <h3>GitHub</h3>
+  <ol>
+    <li>
+      Iniciar sesión en Github:
+      <pre><a href="https://github.com/">Ir a Github</a></pre>
+      <em>*Iniciar sesión con tu cuenta de Github o crear una nueva</em>
+    </li>
+    <li>Click en la imagen de perfil en la parte posterior derecha</li>
+    <li>Click en Settings</li>
+    <li>Click en Developer settings</li>
+    <li>
+      Click en New GitHub App
+      <br>
+      <em>*Si aparece lo de confirm password, ingresarlo</em>
+    </li>
+    <li>
+      Asignar nombre de la aplicación
+      <br>
+      <code>Login con Socialite</code>
+    </li>
+    <li>
+      Asignar User authorization callback URL
+      <br>
+      <code>https://loginsocialite.it/login/github/callback</code>
+      <br>
+      <em>*Tener en cuenta el nombre del Host virtual y su dominio</em>
+    </li>
+    <li>
+      Asignar Homepage URL
+      <br>
+      <code>https://loginsocialite.it</code>
+    </li>
+    <li>
+      Click en Create GitHub App
+      <br>
+      <em>*Ahí es donde se muestran las credenciales de la API de GitHub</em>
+    </li>
+  </ol>
+
+  <!-- Proyecto Login con Socialite -->
+  <h3>Proyecto Login con Socialite</h3>
+  <ol>
+    <li>
+      Edición del archivo config/services.php
+      <br>
+      <em>*Se registran las configuraciones de Socialite de las 2 API's</em>
     </li>
     <li>
       Edición del archivo .env
       <br>
-      <code>DB_DATABASE=loginSocialite</code>
+      <em>*Se agregan las configuraciones para Socialite dependiendo las llaves de la API</em>
       <br>
-      <code>DB_USERNAME=root</code>
+      <code>GITHUB_CLIENT_ID=</code>
       <br>
-      <code>DB_PASSWORD=</code>
-    </li>
-    <li>
-      Implementar las migraciones
-      <pre>php artisan migrate</pre>
-      Implementar las migraciones borrando todo y volviendolo a crear
-      <pre>php artisan migrate:fresh</pre>
+      <code>GITHUB_CLIENT_SECRET=</code>
+      <br>
+      <br>
+      <code>FACEBOOK_CLIENT_ID=</code>
+      <br>
+      <code>FACEBOOK_CLIENT_SECRET=</code>
     </li>
   </ol>
 <!-- End Commit instructions -->
@@ -42,5 +113,10 @@
 
 </ul>
 
+<<<<<<< HEAD
 <em></em>
 <!-- End notes -->
+=======
+<em>*La URL del proyecto debe ser corta y con dominio .it, ya que las API's muestran error</em>
+<!-- End notes -->
+>>>>>>> 32e20dd... Crear APPs para el inicio de sesión con Facebook y Github
