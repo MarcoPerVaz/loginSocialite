@@ -3,53 +3,44 @@
   <h1 align="center">Proyecto - Login con Socialite</h1>
   <!-- End Title -->
 
-  <!-- Commit name -->
-  <h2>Commit - <strong>Instalar Socialite, inicio del sistema de autenticación</strong></h2>
-  <!-- End Commit name -->
-  
-  <!-- Commit instructions -->
+<!-- Commit name -->
+<h2>Commit - <strong>Migraciones - users, user_social_account</strong></h2>
+<!-- End Commit name -->
+
+<!-- Commit instructions -->
   <ol>
     <li>
-      Instalación de Socialite
-      <pre>composer require laravel/socialite "^3.2.0"</pre>
-    </li>
-    <li>
-      Instalación del scaffolding de Autenticación de Laravel
-      <pre>php artisan make:auth</pre>
-      <em>*Este comando genera archivos y código necesario para la autenticación del proyecto</em>
-    </li>
-    <li>
-      Edición de la vista resources/views/auth/login.blade.php
+      Edición de la migración <code>create_users_table</code>
       <br>
-      <em>*Se agregó la propiedad novalidate a la etiqueta form</em>
+      <em>*Los campos de la tabla <code>user_social_accounts</code> bien se pueden crear en una migración por separado</em>
     </li>
     <li>
-      Edición de la vista resources/views/auth/register.blade.php
-      <br>
-      <em>*Se agregó la propiedad novalidate a la etiqueta form</em>
+      Creación de la Base de Datos loginSocialite desde la consola de laragon
+      <pre>mysql -u root</pre>
+      <pre>create database cursosOnline_laravel56_Udemy</pre>
     </li>
     <li>
-      Edición de la vista resources/views/auth/passwords/email.blade.php
+      Edición del archivo .env
       <br>
-      <em>*Se agregó la propiedad novalidate a la etiqueta form</em>
+      <code>DB_DATABASE=loginSocialite</code>
+      <br>
+      <code>DB_USERNAME=root</code>
+      <br>
+      <code>DB_PASSWORD=</code>
+    </li>
+    <li>
+      Implementar las migraciones
+      <pre>php artisan migrate</pre>
+      Implementar las migraciones borrando todo y volviendolo a crear
+      <pre>php artisan migrate:fresh</pre>
     </li>
   </ol>
-  <!-- End Commit instructions -->
-  
-  <!-- Notes -->
-  <h3>Notas:</h3>
-  <ul>
-    <li>
-      Laravel Socialite es una librería para iniciar sesión con Facebook, GitHub, Bitbucket, Twitter, Google.
-      pero que por defecto solo tiene en Inglés
-      <pre><a href="https://laravel.com/docs/5.6/socialite">Ir a Laravel Socialite</a></pre>
-    </li>
-    <li>
-      Laravel Auth es un paquete de Laravel que crea lo necesario para un inicio de sesión
-      <pre><a href="https://laravel.com/docs/5.6/authentication">Ir a Authentication de Laravel</a></pre>
-      <pre><a href="https://laravel.com/docs/5.6/authentication#included-routing">Ir a comando de Authentication</a></pre>
-    </li>
-  </ul>
-    
-  <em></em>
-  <!-- End notes -->
+<!-- End Commit instructions -->
+<!-- Notes -->
+<h3>Notas:</h3>
+<ul>
+
+</ul>
+
+<em></em>
+<!-- End notes -->
