@@ -113,10 +113,5 @@
 
 </ul>
 
-<<<<<<< HEAD
-<em></em>
-<!-- End notes -->
-=======
 <em>*La URL del proyecto debe ser corta y con dominio .it, ya que las API's muestran error</em>
 <!-- End notes -->
->>>>>>> 32e20dd... Crear APPs para el inicio de sesión con Facebook y Github
