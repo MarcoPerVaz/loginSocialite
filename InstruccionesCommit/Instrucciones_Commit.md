@@ -4,59 +4,48 @@
 <!-- End Title -->
 
 <!-- Commit name -->
-<h2>Commit - <strong>Relacionar todos los modelos de la App con Eloquent y Seeds</strong></h2>
+<h2>Commit - <strong>Sass, JS y Yarn, generando archivos que entiende el browser</strong></h2>
 <!-- End Commit name -->
 
 <!-- Commit instructions -->
 <ol>
-  <li>Edición del modelo <code>app/User</code></li>
   <li>
-    Creación y edición del modelo <code>UserSocialAccount</code>
-    <pre>php artisan make:model UserSocialAccount</pre>
+    Descargar Yarn
+    <pre><a href="https://classic.yarnpkg.com/en/docs/install#windows-stable">Descargar Yarn</a></pre>
   </li>
-  <em>*Relaciones con Eloquent</em>
+  <li>Seleccionar sistema operativo</li>
+  <li>Seleccionar versión de Yarn</li>
+  <li>Click en Download Installer</li>
+  <li>Instalar</li>
+  <li>Reiniciar el editor de código</li>
   <li>
-    Edición del archivo <code>seeds/DatabaseSeeder</code>
-    <br>
-    <em>*Se crea el factory para los usuarios</em>
+    Comando para comprobar la versión de Yarn
+    <pre>yarn --version</pre>
   </li>
   <li>
-    Implementación de las migraciones borrando y generandolas de nuevo con información predefinida
-    <pre>php artisan migrate:fresh --seed</pre>
+    Instalar las dependencias de Javascript con Yarn
+    <pre>yarn</pre>
+    <em>*Es similar a usar npm install</em>
   </li>
+  <li>
+    Usar el comando
+    <pre>npm run dev</pre>
+    <em>*Compila solo una vez los archivos</em>
+    <pre>npm run watch</pre>
+    <em>*Compila cada vez que detecta cambios</em>
+  </li>
+  <li>Edición del archivo <code>resources/assets/sass/app.scss</code></li>
+  <li>Edición del archivo <code>resources/assets/sass/_variables.scss</code></li>
 </ol>
-</li>
-<!-- End Commit instructions -->
-
-  <!-- Proyecto Login con Socialite -->
-  <h3>Proyecto Login con Socialite</h3>
-  <ol>
-    <li>
-      Edición del archivo config/services.php
-      <br>
-      <em>*Se registran las configuraciones de Socialite de las 2 API's</em>
-    </li>
-    <li>
-      Edición del archivo .env
-      <br>
-      <em>*Se agregan las configuraciones para Socialite dependiendo las llaves de la API</em>
-      <br>
-      <code>GITHUB_CLIENT_ID=</code>
-      <br>
-      <code>GITHUB_CLIENT_SECRET=</code>
-      <br>
-      <br>
-      <code>FACEBOOK_CLIENT_ID=</code>
-      <br>
-      <code>FACEBOOK_CLIENT_SECRET=</code>
-    </li>
-  </ol>
 <!-- End Commit instructions -->
 <!-- Notes -->
 <h3>Notas:</h3>
 <ul>
-  
+  <li>
+    Yarn es administrador de paquetes de PHP (parecido a npm)
+    <pre><a href="https://yarnpkg.com/">Ir a sitio oficial de Yarn</a></pre>
+  </li>
 </ul>
 
-<em>*La URL del proyecto debe ser corta y con dominio .it, ya que las API's muestran error</em>
+<em></em>
 <!-- End notes -->
